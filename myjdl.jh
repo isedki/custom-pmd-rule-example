@@ -1,0 +1,49 @@
+
+
+
+entity NewsPreferences {
+	subject1 String,
+    subject2 String,
+    subject3 String,
+    newsOutlet String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String,
+    country String
+}
+
+entity User {
+	name String,
+    age Long,
+    sex String,
+    maritalStatus String,
+    email String,
+    anyKids String
+}
+
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship OneToOne {
+	NewsPreferences{user} to User
+}
+
+relationship OneToOne {
+	Location{user} to User
+}
+
+
+
+
+
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
